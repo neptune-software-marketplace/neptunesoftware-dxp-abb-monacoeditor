@@ -1,0 +1,362 @@
+{
+	"id": "f7674349-d929-ed11-bd6e-000d3ab1d9ff",
+	"createdAt": "2022-09-01T09:34:39.770Z",
+	"updatedAt": "2022-09-01T09:35:45.243Z",
+	"createdBy": "lloyd.trevarthen@neptune-software.com",
+	"changedBy": "lloyd.trevarthen@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "1",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "2",
+					"fieldName": "oApp",
+					"fieldParent": "1",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "4",
+							"fieldName": "oPagecodeSnippetEditor",
+							"fieldParent": "2",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "MONACOEDITOR",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "8fe7dfa1-b0d7-4338-e6ba-0380dcad2e62",
+									"fieldName": "codeSnippetEditorHTML",
+									"fieldParent": "4",
+									"fieldType": "sap.ui.core.HTML",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "content",
+											"grouping": "Properties",
+											"value": "<div id='codeSnippetEditor' style='height:100%;width:100%;'></div>",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "afterRendering",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"codesnippet.editor.init();\r",
+												"var tabKey = \"codeSnippetEditor\";\r",
+												"setTimeout(function() {\r",
+												"    codesnippet.editor.showEditorforImport(tabKey, \"\");\r",
+												"}, 500);\r",
+												"\r",
+												""
+											],
+											"translation": []
+										}
+									],
+									"data": []
+								},
+								{
+									"fieldNo": "b3d82d29-3737-4343-c9eb-d06b4381c01d",
+									"fieldName": "oBarFooter",
+									"fieldParent": "4",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "ba42649f-712b-414b-9399-25d9af89396e",
+											"fieldName": "Left",
+											"fieldParent": "b3d82d29-3737-4343-c9eb-d06b4381c01d",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentLeft",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "182c1528-3d9e-4bf5-ada2-166f8fce2125",
+													"fieldName": "oButtonAddCode",
+													"fieldParent": "ba42649f-712b-414b-9399-25d9af89396e",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "AddCode",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"var myTestJS = 'var context = oEvent.oSource.getBindingContext();\\nvar data = JSON.parse(JSON.stringify(context.getObject()));\\nconsole.log(\"--- Product Card Data ---\");\\nconsole.log(data);'",
+																"",
+																"codesnippet.editor.monaco[\"codeSnippetEditor\"].setValue(\"\");",
+																"codesnippet.editor.monaco[\"codeSnippetEditor\"].setScrollPosition({ scrollTop: 0 });",
+																"codesnippet.editor.monaco[\"codeSnippetEditor\"].setValue(myTestJS);"
+															],
+															"language": "javascript",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "fae17939-ecb4-4b99-8751-6c18c45e5567",
+											"fieldName": "Right",
+											"fieldParent": "b3d82d29-3737-4343-c9eb-d06b4381c01d",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "5cfc14a3-7735-4cbc-d060-209b664dc258",
+													"fieldName": "oButtonGetCode",
+													"fieldParent": "fae17939-ecb4-4b99-8751-6c18c45e5567",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "GetCode",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "console.log(codesnippet.editor.monaco[\"codeSnippetEditor\"].getValue())",
+															"script": "console.log(codesnippet.editor.monaco[\"codeSnippetEditor\"].getValue())",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "a15b6573-c873-4da8-9ba0-f556e679a0b9",
+					"fieldName": "codesnippet.editor",
+					"fieldParent": 99999,
+					"fieldType": "neptune.Script",
+					"script": [
+						"==OBJECT STRING==",
+						"var codesnippet = {}\r",
+						"\r",
+						"codesnippet.editor = {\r",
+						"    \r",
+						"    editor: \"\",\r",
+						"    theme: \"vs\",\r",
+						"    monaco: {},\r",
+						"\r",
+						"    init: function () {\r",
+						"\r",
+						"        require([\"vs/editor/editor.main\"], function () {\r",
+						"\r",
+						"            monaco.languages.typescript.typescriptDefaults.setDiagnosticsOptions({\r",
+						"                diagnosticCodesToIgnore: [1108],\r",
+						"            });\r",
+						"\r",
+						"            // Define New Theme\r",
+						"            monaco.editor.defineTheme('vs-dark-ui5', {\r",
+						"                base: 'vs-dark',\r",
+						"                inherit: true,\r",
+						"                rules: [],\r",
+						"                colors: {\r",
+						"                    'editor.background': '#29313a',\r",
+						"                }\r",
+						"            });\r",
+						"\r",
+						"            // CSS Formatter \r",
+						"            monaco.languages.registerDocumentFormattingEditProvider(\"css\", {\r",
+						"                provideDocumentFormattingEdits(model, options, token) {\r",
+						"                    return [{\r",
+						"                        text: css_beautify(model.getValue()),\r",
+						"                        range: model.getFullModelRange()\r",
+						"                    }];\r",
+						"                }\r",
+						"            });\r",
+						"\r",
+						"            // Event When changing Theme\r",
+						"            sap.ui.getCore().attachThemeChanged(function () {\r",
+						"\r",
+						"                var theme = sap.ui.getCore().getConfiguration().getTheme();\r",
+						"\r",
+						"                switch (theme) {\r",
+						"\r",
+						"                    case \"sap_fiori_3_dark\":\r",
+						"                        codesnippet.editor.theme = \"vs-dark-ui5\";\r",
+						"                        monaco.editor.setTheme('vs-dark-ui5');\r",
+						"                        oImagePoweredby.setSrc(codesnippet.config.darkThemeFooterImage.source);\r",
+						"                        oImagePoweredby.setWidth(codesnippet.config.darkThemeFooterImage.width);\r",
+						"                        break;\r",
+						"\r",
+						"                    default:\r",
+						"                        codesnippet.editor.theme = \"vs\";\r",
+						"                        monaco.editor.setTheme('vs');\r",
+						"                        oImagePoweredby.setSrc(codesnippet.config.ligthThemeFooterImage.source);\r",
+						"                        oImagePoweredby.setWidth(codesnippet.config.ligthThemeFooterImage.width);\r",
+						"                        break;\r",
+						"\r",
+						"                }\r",
+						"            });\r",
+						"        });\r",
+						"    },\r",
+						"\r",
+						"    showEditorforImport: function (tabKey, value) {\r",
+						"        if (!codesnippet.editor.monaco[tabKey]) {\r",
+						"            codesnippet.editor.monaco[tabKey] = monaco.editor.create(document.getElementById(tabKey), {\r",
+						"                value: value,\r",
+						"                readOnly: false,\r",
+						"                language: 'javascript',\r",
+						"                //formatOnPaste: true,\r",
+						"                theme: codesnippet.editor.theme,\r",
+						"                \"autoIndent\": true,\r",
+						"                \"formatOnPaste\": true,\r",
+						"                \"formatOnType\": true\r",
+						"            });\r",
+						"\r",
+						"            codesnippet.editor.monaco[tabKey].onDidChangeModelContent((event) => {\r",
+						"                // Change event!\r",
+						"            });\r",
+						"        }\r",
+						"    }\r",
+						"}"
+					],
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": []
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "22.9.1.1035",
+	"application": "monacoeditor",
+	"title": "",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_fiori_3",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": [
+		"==OBJECT STRING==",
+		"<script>var require = {paths: {'vs':'/public/monaco/min/vs'}};</script>",
+		"<script src=\"/public/monaco/min/vs/loader.js\"></script> "
+	],
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": false,
+	"apis": []
+}

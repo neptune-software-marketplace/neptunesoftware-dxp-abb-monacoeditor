@@ -1,0 +1,47 @@
+{
+	"id": "31C15042-D929-ED11-BD6E-000D3AB1D9FF",
+	"createdAt": "2022-09-01T09:34:22.560Z",
+	"createdBy": "lloyd.trevarthen@neptune-software.com",
+	"git": {
+		"targetServers": [],
+		"remote": "https://github.com/neptune-software-marketplace/neptunesoftware-dxp-abb-monacoeditor",
+		"testServers": []
+	},
+	"name": "neptunesoftware-dxp-abb-monacoeditor",
+	"description": null,
+	"ver": "22.9.1.936",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "F7674349-D929-ED11-BD6E-000D3AB1D9FF",
+			"ver": "22.9.1.1035",
+			"application": "monacoeditor",
+			"title": "",
+			"description": ""
+		}
+	],
+	"api": [],
+	"odataMock": [],
+	"odataSource": [],
+	"dictionary": [],
+	"jsclass": [],
+	"jsscript_group": [],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [],
+	"category": [],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"wf_definition": [],
+	"department": [],
+	"script_scheduler": [],
+	"connector": []
+}
